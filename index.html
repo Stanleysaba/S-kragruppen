@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Konto verifiering för Facebookgrupp</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">Förnamn</label>
+    <input type="text" id="fname" name="firstname" placeholder="Ditt namn..">
+
+    <label for="lname">Efternamn</label>
+    <input type="text" id="lname" name="lastname" placeholder="Ditt efternamn..">
+    
+    <h3>Koppla dina sociala medier(valfritt)</h3>
+    <p>Tänk på att du inte får dela dina sociala medier i gruppen utan att ha registrerat de här först.</p>
+    <p>Du får heller inte dela de i gruppen utan admins godkännande.</p>
+
+    <label for="snapchat">Snapchat</label>
+    <input type="text" id="lname" name="snapchat" placeholder="din snapchat..">
+   
+    <label for="instagram">Instagram</label>
+    <input type="text" id="lname" name="instagram" placeholder="din instagram">
+
+
+
+    <h3>Ladda upp en bild på framsidan av din IDhandling</h3>
+
+<input type="file" id="myFile">
+
+<button onclick="myFunction()">Ladda upp</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myFile");
+  x.disabled = true;
+}
+</script>
+<br><br>
+
+<h3>Ansiktsverifiering</h3>
+<p>Ladda upp en bild med denna pose.</p><br>
+<p>Tänk på att ansiktet ska vara tydligt.</p>
+<img src="picturever.png"> <br><br>
+
+<input type="file" id="myFile">
+
+<button onclick="myFunction()">Ladda upp</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myFile");
+  x.disabled = true;
+}
+</script>
+<br><br>
+
+
+    <input type="submit" value="Skicka in">
+  </form>
+</div>
+
+</body>
+</html>
