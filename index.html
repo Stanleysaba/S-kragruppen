@@ -5,7 +5,7 @@
   <title>Group Secure Verification</title>
   <link rel="stylesheet" href="Styles.css">
 
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://formsubmit.co/"></script>
 </head>
 
 <body>
@@ -15,12 +15,12 @@
   <h3>Konto verifiering för Facebookgrupp</h3>
 
   <div class="container">
-    <form action="https://smtpjs.com/v3/smtp.js" method="POST" enctype="text/plain">
+    <form action="https://formsubmit.co/sakragruppen@gmail.com" method="POST" enctype="text/plain">
       <label for="fname">Förnamn</label>
-      <input type="text" id="fname" name="firstname" placeholder="Ditt namn..">
+      <input type="text" id="fname" name="firstname" placeholder="Ditt namn.." required>
 
       <label for="lname">Efternamn</label>
-      <input type="text" id="lname" name="lastname" placeholder="Ditt efternamn..">
+      <input type="text" id="lname" name="lastname" placeholder="Ditt efternamn.." reqired>
 
       <h3>Koppla dina sociala medier(valfritt)</h3>
       <p>Tänk på att du inte får dela dina sociala medier i gruppen utan att ha registrerat de här först.</p>
@@ -35,7 +35,7 @@
 
 
       <h3>Ladda upp en bild på framsidan av din IDhandling</h3><br>
-      <input type="file" name="attachment" accept="image/png, image/jpeg">
+      <input type="file" name="attachment" accept="image/png, image/jpeg" required>
       <br><br>
 
       <h3>Ansiktsverifiering</h3>
@@ -43,32 +43,12 @@
       <p>Tänk på att ansiktet ska vara tydligt.</p>
       <img src="picturever.png"> <br><br>
 
-      <input type="file" name="attachment" accept="image/png, image/jpeg">
+      <input type="file" name="attachment" accept="image/png, image/jpeg" required>
 
       <br><br>
 
-      <input type="button" value="Send Email" onclick="sendEmail()" />
-      <script type="text/javascript">
+     <button type="submit">Send</button>
 
-        function sendEmail() {
-
-          Email.send({
-            SecureToken: "b33947d1-756e-4ea7-ac74-81b9960b0081",
-            To: 'sakragruppen@gmail.com',
-            From: "sakraemailsender@gmail.com",
-            Subject: "This is the subject",
-            Body: "And this is the body",
-            Attachments: [
-              {
-                name: "smtpjs.png",
-                path: "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
-              }]
-          }).then(
-            message => alert(message)
-          )
-        };
-
-      </script>
     </form>
   </div>
 
